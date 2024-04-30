@@ -43,7 +43,6 @@ while not bFinished do
 		bFinished = true
 		break
 	end
-
 	-- Get this every frame incase the monitor resizes	
 	local w,h = term.getSize()
 	local startX = math.floor( (w - 65) / 2 )
