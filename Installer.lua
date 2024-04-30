@@ -35,4 +35,7 @@ sleep(2)
 term.setCursorPos( 16, 6 )
 --Install startup Script
 installerf("EHuR63d1", "/startup/STARTUP")
+--set up folders--
+fs.makeDir(".programs")
+shell.path(".:/rom/programs:/.programs")
 install()
