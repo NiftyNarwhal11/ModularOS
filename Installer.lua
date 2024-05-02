@@ -4,8 +4,8 @@ version = ""
  
 -- Installer Function
 installerf = function(code, file)
-    print("Downloading pastebin.com/"..code)
-    downloader = http.get("http://pastebin.com/raw/"..code)
+    print("Installing from GitHub")
+    downloader = http.get("https://raw.githubusercontent.com/NiftyNarwhal11/ModularOS/main/"..code)
     if downloader then
         input = io.open(file, "w")
         input:write(downloader.readAll())
@@ -21,8 +21,8 @@ end
 -- End of function
 
 -- Installers go here:
-installerf("YrHD1eZL", "/.os/.password")
-installerf("YDKTXHtR", "/ModuleInstallers/Rednet")
+installerf(".os/.password?token=GHSAT0AAAAAACRUSC4DSXVT62I56P3RAFXYZRTRXSA", "/.os/.password")
+installerf("ModuleInstallers/Rednet.lua?token=GHSAT0AAAAAACRUSC4CYFTGIRRUL5EWX5J2ZRTRVXA", "/ModuleInstallers/Rednet")
 term.clear()
 function install()
 	term.clear()
@@ -34,7 +34,7 @@ install()
 sleep(2)
 term.setCursorPos( 16, 6 )
 --Install startup Script
-installerf("EHuR63d1", "/startup/STARTUP")
+installerf("startup/STARTUP.lua?token=GHSAT0AAAAAACRUSC4CDMPDYPUGY3QA2KUCZRTRYVQ", "/startup/STARTUP")
 --set up folders--
 fs.makeDir(".programs")
 shell.setPath(("%s:/.programs"):format(shell.path()))
