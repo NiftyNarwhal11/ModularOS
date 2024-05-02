@@ -1,4 +1,4 @@
-shell.run("wget https://raw.githubusercontent.com/NiftyNarwhal11/ModularOS/v0.0.1/.Modules/RednetModule?token=GHSAT0AAAAAACRUSC4CSNXKXCNDHTQJCP5EZRTRTJQ /startup/RednetModule")
+shell.run("wget https://raw.githubusercontent.com/NiftyNarwhal11/ModularOS/v0.0.1/.Modules/RednetModule.lua?token=GHSAT0AAAAAACRUSC4CSNXKXCNDHTQJCP5EZRTRTJQ /startup/RednetModule.lua")
 settings.define("MOS.rednet.modemside", {
     description = "The side for the rednet modules modem",
     default = "back",
