@@ -1,7 +1,7 @@
 shell.exit()
 shell.run( "set motd.enable false" )
 shell.run( "set shell.allow_disk_startup false" )
-local version = "0.8"
+local version = "0.9"
 local latestVersion = http.get("http://www.pastebin.com/raw/qsPhpy6x")
 local lversion = latestVersion.readAll()
 if lversion > version then
@@ -15,7 +15,9 @@ if lversion > version then
     a = read()
     if a == "" then
         shell.run("delete /startup")
-        shell.run("pastebin run wbv76X5Y")
+        shell.run("delete Installer.lua
+        shell.run("wget https://raw.githubusercontent.com/NiftyNarwhal11/ModularOS/main/Installer.lua?token=GHSAT0AAAAAACRUSC4C5YDZTPOSL6YTRJ64ZRTR2EA Installer.lua")
+        shell.run("Installer.lua")
         
     else
         shell.run("/.os/.password")
