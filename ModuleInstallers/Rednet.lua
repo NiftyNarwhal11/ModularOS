@@ -7,3 +7,4 @@ settings.define("MOS.rednet.modemside", {
 write("What is the side your modem is on? >")
 local side = read()
 settings.set("MOS.rednet.modemside", side)
+settings.save(".settings")
