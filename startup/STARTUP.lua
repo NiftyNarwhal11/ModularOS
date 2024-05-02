@@ -15,7 +15,7 @@ if lversion > version then
     a = read()
     if a == "" then
         shell.run("delete /startup")
-        shell.run("delete Installer.lua
+        shell.run("delete Installer.lua")
         shell.run("wget https://raw.githubusercontent.com/NiftyNarwhal11/ModularOS/main/Installer.lua?token=GHSAT0AAAAAACRUSC4C5YDZTPOSL6YTRJ64ZRTR2EA Installer.lua")
         shell.run("Installer.lua")
         
