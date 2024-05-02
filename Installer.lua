@@ -11,7 +11,7 @@ installerf = function(code, file)
         input:write(downloader.readAll())
         input:close()
 		term.setCursorPos( 16,3 )
-		print("Downloaded file pastebin.com/"..code)
+		print("Downloaded file"..code)
 		sleep(2)
         return true
     else
