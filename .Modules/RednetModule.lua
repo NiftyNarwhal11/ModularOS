@@ -1,3 +1,3 @@
 print("Rednet opened")
 local modem = peripheral.find("modem")
-rednet.open("top")
+rednet.open(settings.get("MOS.rednet.modemside"))
