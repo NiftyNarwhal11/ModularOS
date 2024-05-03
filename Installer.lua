@@ -37,14 +37,14 @@ term.setCursorPos( 16, 6 )
 installerf("startup/STARTUP.lua?token=GHSAT0AAAAAACRUSC4CDMPDYPUGY3QA2KUCZRTRYVQ", "/startup/STARTUP")
 print(">Do you want to auto-update the software?(Enter true or false)")
 write(">")
-local auto-update = lower(read())
+local autoupdate = lower(read())
 settings.load(".settings")
 settings.define("MOS.auto-update.enabled", {
     description = "Weather to auto update the software or not",
     default = true,
     type = bool,
 })
-settings.set("MOS.auto-update.enable", stringtoboolean(auto-update))
+settings.set("MOS.auto-update.enable", stringtoboolean(autoupdate))
 settings.save(".settings")
 --set up folders--
 fs.makeDir(".programs")
