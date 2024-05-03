@@ -36,13 +36,16 @@ term.setCursorPos( 16, 6 )
 --Install startup Script
 installerf("startup/STARTUP.lua?token=GHSAT0AAAAAACRUSC4CDMPDYPUGY3QA2KUCZRTRYVQ", "/startup/STARTUP")
 print(">Do you want to auto-update the software?(Enter true or false)")
-local auto-update = lower
+write(">")
+local auto-update = lower(read())
 settings.load(".settings")
 settings.define("MOS.auto-update.enabled", {
     description = "Weather to auto update the software or not",
     default = true,
     type = bool,
 })
+settings.set("MOS.auto-update.enable")
+settings.save(".settings")
 --set up folders--
 fs.makeDir(".programs")
 shell.setPath(("%s:/.programs"):format(shell.path()))
