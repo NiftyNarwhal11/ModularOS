@@ -1,7 +1,7 @@
 os.pullEvent = os.pullEventRaw
 term.clear()
 version = ""
- 
+local stringtoboolean={ ["true"]=true, ["false"]=false }
 -- Installer Function
 installerf = function(code, file)
     print("Installing from GitHub")
@@ -35,6 +35,14 @@ sleep(2)
 term.setCursorPos( 16, 6 )
 --Install startup Script
 installerf("startup/STARTUP.lua?token=GHSAT0AAAAAACRUSC4CDMPDYPUGY3QA2KUCZRTRYVQ", "/startup/STARTUP")
+print(">Do you want to auto-update the software?(Enter true or false)")
+local auto-update = lower
+settings.load(".settings")
+settings.define("MOS.auto-update.enabled", {
+    description = "Weather to auto update the software or not",
+    default = true,
+    type = bool,
+})
 --set up folders--
 fs.makeDir(".programs")
 shell.setPath(("%s:/.programs"):format(shell.path()))
