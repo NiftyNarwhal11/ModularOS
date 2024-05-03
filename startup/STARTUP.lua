@@ -1,9 +1,11 @@
 shell.exit()
 shell.run( "set motd.enable false" )
 shell.run( "set shell.allow_disk_startup false" )
-local version = "0.9"
+local version = "0.10"
 local latestVersion = http.get("http://www.pastebin.com/raw/qsPhpy6x")
 local lversion = latestVersion.readAll()
+settings.load(".settings")
+if settings.get("MOS.auto-update.enabled") == true then
 if lversion > version then
     term.setBackgroundColor( colors.yellow )
     term.clear()
@@ -24,4 +26,7 @@ if lversion > version then
     end
     else
         shell.run("/.os/.password")
+end
+else
+    shell.run("/.os/.password")
 end
