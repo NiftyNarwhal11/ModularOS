@@ -44,7 +44,7 @@ settings.define("MOS.auto-update.enabled", {
     default = true,
     type = bool,
 })
-settings.set("MOS.auto-update.enable")
+settings.set("MOS.auto-update.enable", stringtoboolean(auto-update))
 settings.save(".settings")
 --set up folders--
 fs.makeDir(".programs")
