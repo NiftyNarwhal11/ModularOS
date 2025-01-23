@@ -12,7 +12,7 @@ local w,h = term.getSize()
   bkColor = colors.gray
   lnColor = colors.lightGray
   txtColor = colors.lime
-  local logins = {{"admin", "root"}} -- {username, password}
+  local logins = {{settings.get("user.username"), settings.get("user.password")}} -- {username, password}
 --Functions
  
  
