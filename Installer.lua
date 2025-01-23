@@ -21,8 +21,8 @@ end
 -- End of function
 
 -- Installers go here:
-installerf(".os/.password?token=GHSAT0AAAAAACRUSC4DSXVT62I56P3RAFXYZRTRXSA", "/.os/.password")
-installerf("ModuleInstallers/Rednet.lua?token=GHSAT0AAAAAACRUSC4CYFTGIRRUL5EWX5J2ZRTRVXA", "/ModuleInstallers/Rednet")
+installerf(".os/.password", "/.os/.password")
+installerf("ModuleInstallers/Rednet.lua", "/ModuleInstallers/Rednet")
 term.clear()
 function install()
 	term.clear()
@@ -34,7 +34,7 @@ install()
 sleep(2)
 term.setCursorPos( 16, 6 )
 --Install startup Script
-installerf("startup/STARTUP.lua?token=GHSAT0AAAAAACRUSC4CDMPDYPUGY3QA2KUCZRTRYVQ", "/startup/STARTUP")
+installerf("startup/STARTUP.lua", "/startup/STARTUP")
 print(">Do you want to auto-update the software?(Enter true or false)")
 write(">")
 local autoupdate = string.lower(read())
