@@ -2,7 +2,7 @@ shell.exit()
 shell.run( "set motd.enable false" )
 shell.run( "set shell.allow_disk_startup false" )
 local version = "1.0.1"
-local latestVersion = http.get("https://raw.githubusercontent.com/NiftyNarwhal11/ModularOS/refs/heads/main/latestVersion)
+local latestVersion = http.get("https://raw.githubusercontent.com/NiftyNarwhal11/ModularOS/refs/heads/main/latestVersion")
 local lversion = latestVersion.readAll()
 settings.load(".settings")
 if settings.get("MOS.auto-update.enabled") == true then
