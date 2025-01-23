@@ -20,6 +20,7 @@ if lversion > version then
     term.write("Press Enter to update to new version.")
     term.setCursorPos(5,9)
     term.write("\n Add other characters before enter to cancel")
+    a = read()
     if a == "" then
         shell.run("delete /startup")
         shell.run("delete Installer.lua")
