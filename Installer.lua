@@ -35,16 +35,39 @@ sleep(2)
 term.setCursorPos( 16, 6 )
 --Install startup Script
 installerf("startup/STARTUP.lua", "/startup/STARTUP")
+term.setCursorPos(1,1)
+term.clear()
 print(">Do you want to auto-update the software?(Enter true or false)")
 write(">")
+print()
+
 local autoupdate = string.lower(read())
+print("Set Username")
+write(">")
+local username = read()
+print()
+print("Set Password")
+write(">")
+local password = read()
 settings.load(".settings")
 settings.define("MOS.auto-update.enabled", {
     description = "Weather to auto update the software or not",
     default = true,
     type = bool,
 })
+ settings.define("MOS.user.username", {
+    description = "Username for ModularOS.",
+    default = "admin",
+    type = "string",
+  })
+  settings.define("MOS.user.password", {
+    description = "Password for ModularOS.",
+    default = "root",
+    type = "string",
+  })
 settings.set("MOS.auto-update.enable", stringtoboolean[autoupdate])
+settings.set("MOS.user.username", username)
+settings.set("MOS.user.password", password)
 settings.save(".settings")
 --set up folders--
 fs.makeDir(".programs")
