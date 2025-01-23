@@ -1,7 +1,7 @@
 shell.exit()
 shell.run( "set motd.enable false" )
 shell.run( "set shell.allow_disk_startup false" )
-local version = "1.0.1"
+local version = "1.0.2"
 local latestVersion = http.get("https://raw.githubusercontent.com/NiftyNarwhal11/ModularOS/refs/heads/main/latestVersion")
 local lversion = latestVersion.readAll()
 settings.load(".settings")
@@ -21,11 +21,11 @@ if lversion > version then
         shell.run("wget run https://raw.githubusercontent.com/NiftyNarwhal11/ModularOS/refs/heads/main/Installer.lua")
         
     else
-        shell.run("/.os/.password")
+        shell.run("/.os/.password.lua")
     end
     else
-        shell.run("/.os/.password")
+        shell.run("/.os/.password.lua")
 end
 else
-    shell.run("/.os/.password")
+    shell.run("/.os/.password.lua")
 end
