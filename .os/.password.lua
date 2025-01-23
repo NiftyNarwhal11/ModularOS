@@ -13,7 +13,7 @@ local w,h = term.getSize()
   lnColor = colors.lightGray
   txtColor = colors.lime
   settings.load(".settings")
-  local logins = {{settings.get("user.username"), settings.get("user.password")}} -- {username, password}
+  local logins = {{settings.get("MOS.user.username"), settings.get("MOS.user.password")}} -- {username, password}
 --Functions
  
  
