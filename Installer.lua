@@ -5,7 +5,7 @@ local stringtoboolean={ ["true"]=true, ["false"]=false }
 -- Installer Function
 installerf = function(code, file)
     print("Installing from GitHub")
-    downloader = http.get("https://raw.githubusercontent.com/NiftyNarwhal11/ModularOS/main/"..code)
+    downloader = http.get("https://raw.githubusercontent.com/NiftyNarwhal11/ModularOS/refs/heads/main/"..code)
     if downloader then
         input = io.open(file, "w")
         input:write(downloader.readAll())
