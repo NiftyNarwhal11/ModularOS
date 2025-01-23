@@ -1,11 +1,14 @@
 shell.exit()
 shell.run( "set motd.enable false" )
 shell.run( "set shell.allow_disk_startup false" )
-local version = tonumber("1.04")
+local version = "1.05"
 local latestVersion = http.get("https://raw.githubusercontent.com/NiftyNarwhal11/ModularOS/refs/heads/main/latestVersion")
-local lversion = latestVersion.readLine()
+print(lversion)
+print(version)
+print(lversion > version == true)
+print(settings.get("MOS.auto-update.enable"))
 settings.load(".settings")
-if settings.get("MOS.auto-update.enabled") == true then
+if settings.get("MOS.auto-update.enable") == true then
 if lversion > version then
     term.setBackgroundColor( colors.yellow )
     term.clear()
