@@ -1,8 +1,9 @@
 shell.exit()
 shell.run( "set motd.enable false" )
 shell.run( "set shell.allow_disk_startup false" )
-local version = "1.05"
+local version = "1.06"
 local latestVersion = http.get("https://raw.githubusercontent.com/NiftyNarwhal11/ModularOS/refs/heads/main/latestVersion")
+local lversion = latestVersion.readLine()
 print(lversion)
 print(version)
 print(lversion > version == true)
