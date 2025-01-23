@@ -21,7 +21,7 @@ end
 -- End of function
 
 -- Installers go here:
-installerf(".os/.password", "/.os/.password")
+installerf(".os/.password.lua", "/.os/.password.lua")
 installerf("ModuleInstallers/Rednet.lua", "/ModuleInstallers/Rednet")
 term.clear()
 function install()
