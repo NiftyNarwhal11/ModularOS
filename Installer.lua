@@ -1,6 +1,6 @@
 os.pullEvent = os.pullEventRaw
 term.clear()
-version = ""
+version = http.get("https://raw.githubusercontent.com/NiftyNarwhal11/ModularOS/refs/heads/main/latestVersion").readLine()
 local stringtoboolean={ ["true"]=true, ["false"]=false }
 -- Installer Function
 installerf = function(code, file)
@@ -65,9 +65,15 @@ settings.define("MOS.auto-update.enabled", {
     default = "root",
     type = "string",
   })
+  settings.define("MOS.version", {
+    description = "Version of ModularOS.",
+    default = "0.0.0",
+    type = "string",
+  })
 settings.set("MOS.auto-update.enable", stringtoboolean[autoupdate])
 settings.set("MOS.user.username", username)
 settings.set("MOS.user.password", password)
+settings.set("MOS.version", version)
 settings.save(".settings")
 --set up folders--
 fs.makeDir(".programs")
