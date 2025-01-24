@@ -10,7 +10,7 @@ while true do
     print("Request for " .. msg2 .. " coming in from ID: " .. id2)
     if id2 == id then
       f = fs.open(msg2, "r")
-      rednet.send(id, f.readAll()
+      rednet.send(id, f.readAll())
       f.close()
     end
   end
