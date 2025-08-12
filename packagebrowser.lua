@@ -110,5 +110,7 @@ function menu( title, ... )
         end
     end
 end
-local package = menu("Hello", "Hi")
+packages = http.get("https://raw.githubusercontent.com/NiftyNarwhal11/ModularOS/refs/heads/main/packagelist").readAll()
+packagelist = require "cc.strings".split(packages, "%.n+")
+local package = menu("Hello", packagelist)
 print(package)
