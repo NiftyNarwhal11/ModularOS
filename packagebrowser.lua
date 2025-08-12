@@ -8,7 +8,7 @@ function menu( title, ... )
         if #pages[ #pages ] == 7 then
             pages[ #pages + 1 ] = {}
         end
-        pages[ #pages ][ #pages[#pages] + 1 ] = tArgs[ i ]
+        pages[ #pages ][ #pages[#pages] + 1 ] = tArgs[ 1 ][i]
     end
     local maxLen = 0
     for k, v in ipairs( tArgs ) do
