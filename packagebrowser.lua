@@ -116,5 +116,5 @@ packages = http.get("https://raw.githubusercontent.com/NiftyNarwhal11/ModularOS/
 packagelist = require "cc.strings".split(packages, "%s+")
 local package = menu("Hello", packagelist)
 term.clear()
-term.setCursorPos(0,0)
+term.setCursorPos(1,1)
 print("You have selected to install: ", package)
