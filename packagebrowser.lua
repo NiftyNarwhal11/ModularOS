@@ -111,6 +111,7 @@ function menu( title, ... )
         end
     end
 end
+--Display the menu
 packages = http.get("https://raw.githubusercontent.com/NiftyNarwhal11/ModularOS/refs/heads/main/packagelist").readAll()
 print(packages)
 packagelist = require "cc.strings".split(packages, "%n+")
