@@ -3,12 +3,13 @@ function menu( title, ... )
     term.setBackgroundColor( colors.black )
     local debug = false --#turn to true to see what it's thinking
     local tArgs = { ... }
+    local dulist = tArgs[1]
     local pages = {[1]={}}
-    for i = 1, #tArgs, 1 do
+    for i = 1, #dulist, 1 do
         if #pages[ #pages ] == 7 then
             pages[ #pages + 1 ] = {}
         end
-        pages[ #pages ][ #pages[#pages] + 1 ] = tArgs[ 1 ][i]
+        pages[ #pages ][ #pages[#pages] + 1 ] = dulist[i]
     end
     local maxLen = 0
     for k, v in ipairs( tArgs ) do
@@ -111,6 +112,7 @@ function menu( title, ... )
     end
 end
 packages = http.get("https://raw.githubusercontent.com/NiftyNarwhal11/ModularOS/refs/heads/main/packagelist").readAll()
-packagelist = require "cc.strings".split(packages, "%.n+")
+print(packages)
+packagelist = require "cc.strings".split(packages, "%n+")
 local package = menu("Hello", packagelist)
-print(package)
+print(packagelist[2])
