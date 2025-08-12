@@ -113,7 +113,7 @@ function menu( title, ... )
 end
 --Display the menu
 packages = http.get("https://raw.githubusercontent.com/NiftyNarwhal11/ModularOS/refs/heads/main/packagelist").readAll()
-print(packages)
 packagelist = require "cc.strings".split(packages, "%s+")
 local package = menu("Hello", packagelist)
-print(packagelist[2])
+term.clear()
+print("You have selected to install: ", package)
