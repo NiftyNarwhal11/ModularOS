@@ -84,11 +84,11 @@ function menu( title, ... )
         end
         local event, key = os.pullEvent( "key" )
         local old = selected
-        if key == 200 and type( selected ) == "number" and pages[ page ][ selected - 1 ] then
+        if key == keys.up and type( selected ) == "number" and pages[ page ][ selected - 1 ] then
             selected = selected - 1
-        elseif key == 208 and type( selected ) == "number" and pages[ page ][ selected + 1 ] then
+        elseif key == keys.down and type( selected ) == "number" and pages[ page ][ selected + 1 ] then
             selected = selected + 1
-        elseif key == 28 then
+        elseif key == keys.enter then
             if type( selected ) == "number" then
                 return pages[ page ][ selected ]
             elseif selected == "next" and pages[ page + 1 ] then
@@ -96,13 +96,13 @@ function menu( title, ... )
             elseif selected == "previous" and pages[ page - 1 ] then
                 page = page - 1
             end
-        elseif key == 203 then
+        elseif key == keys.left then
             if selected == "next" then
                 selected = math.ceil( #pages[ page ]/2 )
             elseif type( selected ) == "number" and pages[ page - 1 ] then
                 selected = "previous"
             end
-        elseif key == 205 then
+        elseif key == keys.right then
             if selected == "previous" then
                 selected = math.ceil( #pages[ page ]/2 )
             elseif type( selected ) == "number" and pages[ page + 1 ] then
