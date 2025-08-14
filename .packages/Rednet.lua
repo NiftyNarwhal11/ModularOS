@@ -2,7 +2,7 @@ shell.run("wget https://raw.githubusercontent.com/NiftyNarwhal11/ModularOS/v0.0.
 settings.define("MOS.rednet.modemside", {
     description = "The side for the rednet modules modem",
     default = "back",
-    type = string,
+    type = "string",
 })
 write("What is the side your modem is on? >")
 local side = read()
