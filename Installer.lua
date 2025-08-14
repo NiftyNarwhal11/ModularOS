@@ -22,7 +22,6 @@ end
 
 -- Installers go here:
 installerf(".os/.password.lua", "/.os/.password.lua")
-installerf("ModuleInstallers/Rednet.lua", "/ModuleInstallers/Rednet")
 installerf("packagebrowser.lua", "/packagebrowser.lua")
 term.clear()
 function install()
