@@ -121,7 +121,7 @@ print("You have selected to install: ", package)
 sleep(2)
 local packageConnect = http.get("https://raw.githubusercontent.com/NiftyNarwhal11/ModularOS/refs/heads/main/.packages/" .. package)
 if fs.exists(package .. ".lua") then
-	shell.run("rm " .. package .. "lua")
+	shell.run("rm " .. package .. ".lua")
 end
 shell.run("wget https://raw.githubusercontent.com/NiftyNarwhal11/ModularOS/refs/heads/main/.packages/" .. package .. ".lua " .. " " .. package .. ".lua")
 print("Done!")
