@@ -120,7 +120,8 @@ term.setCursorPos(1,1)
 print("You have selected to install: ", package)
 sleep(2)
 local packageConnect = http.get("https://raw.githubusercontent.com/NiftyNarwhal11/ModularOS/refs/heads/main/.packages/" .. package)
-local packageLines = packageConnect.readAll()
-local file = fs.open(package .. ".lua", "w")
-file.write(packageLines)
+if fs.exists(package .. ".lua") then
+	shell.run("rm " ... package .. "lua")
+end
+shell.run("wget https://raw.githubusercontent.com/NiftyNarwhal11/ModularOS/refs/heads/main/.packages/" .. package .. ".lua " .. " " .. package .. ".lua")
 print("Done!")
